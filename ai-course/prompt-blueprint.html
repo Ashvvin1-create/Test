@@ -148,10 +148,10 @@ footer{margin-top:72px;padding-top:20px;border-top:1px solid var(--line);font-si
     <h1>The prompt behind the AI explained course</h1>
     <p class="strap">Thirteen blocks turn a one-line request into a course that a fresh session builds alone.</p>
     <ul class="facts">
-      <li><b>5,198</b><span>words in the prompt</span></li>
-      <li><b>74</b><span>dated figures</span></li>
-      <li><b>66</b><span>sources</span></li>
-      <li><b>7</b><span>success tests</span></li>
+      <li><b>6,381</b><span>words in the prompt</span></li>
+      <li><b>86</b><span>dated figures</span></li>
+      <li><b>74</b><span>sources</span></li>
+      <li><b>9</b><span>success tests</span></li>
       <li><b>5</b><span>style examples</span></li>
     </ul>
   </header>
@@ -173,24 +173,26 @@ footer{margin-top:72px;padding-top:20px;border-top:1px solid var(--line);font-si
     <main>
       <section id="request">
         <h2>The request and its gaps</h2>
-        <p class="strap">The request named a subject and a style, and it left six decisions open.</p>
+        <p class="strap">The request named a subject, a style and a goal, and it left eight decisions open.</p>
         <div class="prose">
           <p>A model does what the words of a prompt say. When a prompt leaves a decision open, the model fills the gap with a guess. The table shows each gap in your request and the block of the prompt that now closes it.</p>
         </div>
         <div class="request">
-          <span class="label">Your request, shortened</span>
-          <blockquote>Teach me, a non-technical user, everything about AI: how it works, the infrastructure and the economics, with KPIs such as GPU cost per hour and the terminology. Use the simple English standard. Use visual artefacts and text.</blockquote>
+          <span class="label">Your second request, shortened</span>
+          <blockquote>Teach me, a non-technical user, everything about AI: how it works, the infrastructure, the coding infrastructure (AWS, Supabase, Vercel and Cloudflare, what to use when, and how it scales) and the economics, with KPIs such as GPU cost per hour. Use the simple English standard. Use visual artefacts and text. My goal is to become an expert in AI.</blockquote>
         </div>
         <div class="scroll">
           <table>
             <thead><tr><th>Open decision</th><th>How it was closed</th><th>Block in the prompt</th></tr></thead>
             <tbody>
               <tr><td>Who reads the course, and why</td><td>You answered: all views, with the basics of tokens, input and output</td><td><code>settings</code> <code>context</code></td></tr>
-              <tr><td>How deep the course goes</td><td>You answered: the full course, six modules, 60 to 90 minutes</td><td><code>settings</code> <code>course_plan</code></td></tr>
+              <tr><td>How deep the course goes</td><td>You answered: the full course. Version 1.1 has seven modules and takes 75 to 110 minutes</td><td><code>settings</code> <code>course_plan</code></td></tr>
               <tr><td>Which format the course has</td><td>You answered: one interactive web page</td><td><code>settings</code> <code>output_format</code></td></tr>
-              <tr><td>What a good result is</td><td>The method wrote seven tests that the reader must pass</td><td><code>success_criteria</code></td></tr>
-              <tr><td>Which numbers, and at which date</td><td>Three research runs collected 74 figures, dated 26 November 2026</td><td><code>reference_data</code></td></tr>
+              <tr><td>What a good result is</td><td>The method wrote nine tests that the reader must pass</td><td><code>success_criteria</code></td></tr>
+              <tr><td>Which numbers, and at which date</td><td>Research on the web collected 86 figures, dated 26 November 2026</td><td><code>reference_data</code></td></tr>
               <tr><td>What "simple English" means</td><td>The prompt names ASD-STE100 and gives ten rules and five examples</td><td><code>language_rules</code></td></tr>
+              <tr><td>What "coding infrastructure" covers</td><td>The prompt treats the four platforms as four types of platform, and asks for a stack selector</td><td><code>course_plan</code> Module 5</td></tr>
+              <tr><td>What "expert" means</td><td>The prompt sets four levels of skill and a plan of 12 weeks, because one course cannot make an expert</td><td><code>course_plan</code> Module 7</td></tr>
             </tbody>
           </table>
         </div>
@@ -200,38 +202,39 @@ footer{margin-top:72px;padding-top:20px;border-top:1px solid var(--line);font-si
         <h2>Five steps from request to tested prompt</h2>
         <p class="strap">Each step uses the result of the step before it, so the order is fixed.</p>
         <ol class="flow" style="--n:5">
-          <li><b>Define success</b><span>Seven things that the reader can do after one reading.</span></li>
+          <li><b>Define success</b><span>Nine things that the reader can do after one reading.</span></li>
           <li><b>Draft against the checklist</b><span>A role, the situation of the reader, a reason for each rule, and one tag for each kind of content.</span></li>
           <li><b>Choose the techniques</b><span>Supplied data for the numbers, five examples for the style, and a self-check at the end.</span></li>
           <li><b>Add proven blocks</b><span>The Ārahi design system replaces the generic design block.</span></li>
-          <li class="is-point"><b>Run and review</b><span>A fresh session builds the course from the prompt alone. A review then compares the page with the seven tests.</span></li>
+          <li class="is-point"><b>Run and review</b><span>A fresh session builds the course from the prompt alone. A review then compares the page with the nine tests.</span></li>
         </ol>
         <p class="note">The method comes from the Ārahi prompt-engineering skill, which follows the guidance of Anthropic and the technique list of IBM.</p>
       </section>
 
       <section id="anatomy">
         <h2>Anatomy of the prompt</h2>
-        <p class="strap">Reference data takes 48 per cent of the words, because the model cannot know the prices of November 2026.</p>
+        <p class="strap">Reference data takes 47 per cent of the words, because the model cannot know the prices of November 2026.</p>
         <div class="prose">
           <p>The bars show the number of words in each block, in the order of the prompt. Each row states what the block does, why it is there and which principle it applies. Open a row to read the text of the block.</p>
         </div>
         <ol class="blocks">
           <li class="blk" id="blk-role">
-            <div class="blk-head"><span class="blk-n">1</span><code class="blk-tag">&lt;role&gt;</code><span class="blk-bar" role="img" aria-label="33 words"><i style="width:1.3%"></i></span><span class="blk-w">33 words</span></div>
+            <div class="blk-head"><span class="blk-n">1</span><code class="blk-tag">&lt;role&gt;</code><span class="blk-bar" role="img" aria-label="33 words"><i style="width:1.1%"></i></span><span class="blk-w">33 words</span></div>
             <dl class="blk-notes"><div><dt>What it does</dt><dd>Names the teacher, the kind of reader and the writing standard in two sentences.</dd></div><div><dt>Why it is there</dt><dd>A role sets the tone and the level for the full task.</dd></div><div class="principle"><dt>Principle</dt><dd>Assign a role</dd></div></dl>
             <details><summary>Read this block</summary><pre>&lt;role&gt;
 You are a senior technology teacher who writes for business readers. You explain artificial intelligence (AI) to readers who have no technical training, and you write in ASD-STE100 Simplified Technical English.
 &lt;/role&gt;</pre></details>
           </li>
           <li class="blk" id="blk-settings">
-            <div class="blk-head"><span class="blk-n">2</span><code class="blk-tag">&lt;settings&gt;</code><span class="blk-bar" role="img" aria-label="147 words"><i style="width:5.9%"></i></span><span class="blk-w">147 words</span></div>
-            <dl class="blk-notes"><div><dt>What it does</dt><dd>Holds your four answers, the date of the data and the currency.</dd></div><div><dt>Why it is there</dt><dd>You change one block to use the prompt again. The block also tells the model when to ask a question and when to start.</dd></div><div class="principle"><dt>Principle</dt><dd>Be clear and direct</dd></div></dl>
+            <div class="blk-head"><span class="blk-n">2</span><code class="blk-tag">&lt;settings&gt;</code><span class="blk-bar" role="img" aria-label="184 words"><i style="width:6.1%"></i></span><span class="blk-w">184 words</span></div>
+            <dl class="blk-notes"><div><dt>What it does</dt><dd>Holds your answers, your goal, the date of the data and the currency.</dd></div><div><dt>Why it is there</dt><dd>You change one block to use the prompt again. The block also tells the model when to ask a question and when to start.</dd></div><div class="principle"><dt>Principle</dt><dd>Be clear and direct</dd></div></dl>
             <details><summary>Read this block</summary><pre>&lt;settings&gt;
 These settings come from the reader&#x27;s answers to four questions. Change them to use this prompt for a different reader or a different subject.
-- Subject: how AI works, the infrastructure behind AI, and the economics of AI
+- Subject: how AI works, the infrastructure behind AI, the application infrastructure that developers use to build products (for example AWS, Supabase, Vercel and Cloudflare), and the economics of AI
 - Reader: a director at a private equity advisory firm, with no technical training and full fluency in company accounts
 - Purpose: all views. The basics of how AI works (tokens, input and output), the investor view and the operator view
-- Depth: full course, six modules, 60 to 90 minutes to read
+- Goal of the reader: to become an expert in AI
+- Depth: full course, seven modules, 75 to 110 minutes to read, and a learning path of 12 weeks after the course
 - Format: one interactive web page
 - Date of the data: 26 November 2026
 - Currency: US dollars, because the AI market quotes its prices in US dollars
@@ -239,8 +242,8 @@ If a setting is empty, or if two settings conflict, ask one short question befor
 &lt;/settings&gt;</pre></details>
           </li>
           <li class="blk is-point" id="blk-reference_data">
-            <div class="blk-head"><span class="blk-n">3</span><code class="blk-tag">&lt;reference_data&gt;</code><span class="blk-bar" role="img" aria-label="2,496 words"><i style="width:100.0%"></i></span><span class="blk-w">2,496 words</span></div>
-            <dl class="blk-notes"><div><dt>What it does</dt><dd>Gives 74 dated figures in 14 groups, each with a label that shows how firm it is, and 66 sources.</dd></div><div><dt>Why it is there</dt><dd>The model cannot know the prices of November 2026. Without this block, the model supplies old numbers from memory.</dd></div><div class="principle"><dt>Principle</dt><dd>Supply the knowledge, near the top</dd></div></dl>
+            <div class="blk-head"><span class="blk-n">3</span><code class="blk-tag">&lt;reference_data&gt;</code><span class="blk-bar" role="img" aria-label="3,007 words"><i style="width:100.0%"></i></span><span class="blk-w">3,007 words</span></div>
+            <dl class="blk-notes"><div><dt>What it does</dt><dd>Gives 86 dated figures in 16 groups, each with a label that shows how firm it is, and 74 sources.</dd></div><div><dt>Why it is there</dt><dd>The model cannot know the prices of November 2026. Without this block, the model supplies old numbers from memory.</dd></div><div class="principle"><dt>Principle</dt><dd>Supply the knowledge, near the top</dd></div></dl>
             <details><summary>Read this block</summary><pre>&lt;reference_data&gt;
 &lt;data_notes&gt;
 A web search on 26 November 2026 supplied these figures. Each figure has a source key such as [S1], and the source list is at the end of this block. Three labels show how firm a figure is. &quot;Reported&quot; means that a company published the figure. &quot;Estimate&quot; means that an analyst or a news report supplied it. &quot;Uncertain&quot; means that the sources are weak or do not agree. All prices are in US dollars. MTok means one million tokens.
@@ -362,6 +365,24 @@ A web search on 26 November 2026 supplied these figures. Each figure has a sourc
 - OpenAI: average 0.34 Wh. Reported with no method, old source of June 2025 [S50]
 &lt;/group&gt;
 
+&lt;group name=&quot;O. Application platforms: plan prices and limits, November 2026&quot;&gt;
+- Vercel: the Hobby plan is free, with usage caps. The Pro plan costs $20 for each month, and includes one seat that can publish and $20 of usage credit. Each extra seat costs $20 for each month. The Enterprise plan has a custom price. Reported, read through a search summary [S67]
+- Supabase Free plan: 2 projects, a database of 500 MB for each project, 50,000 monthly active users, 1 GB of file storage and 5 GB of egress. Reported [S68]
+- Supabase Pro plan: $25 for each month. It includes $10 of compute credit, 8 GB of disk for each project, 100,000 monthly active users, 100 GB of file storage and 250 GB of egress. Reported [S68]
+- Supabase compute: each project has its own Postgres server. The Micro size costs about $10 for each month and the Small size about $15. The largest size has 64 cores and 256 GB of memory. Reported [S68]
+- Supabase charges above the plan: $0.09 for each GB of egress, and $0.00325 for each extra monthly active user. Reported [S68]
+- Cloudflare Workers: the Free plan permits 100,000 requests each day. The Paid plan has a minimum charge of $5 for each month, and includes 10 million requests for each month. Extra requests cost $0.30 for each million. Cloudflare does not charge for egress. Reported, read through a search summary [S69]
+- Cloudflare R2 file storage: $0.015 for each GB for each month, with the first 10 GB free and no egress fee. Reported, read through a search summary [S70]
+- AWS Lambda functions: $0.20 for each million requests, and $0.0000166667 for each GB-second of compute. Each month, the first 1 million requests and 400,000 GB-seconds are free. Reported, read through secondary pages [S71]
+- AWS EC2 virtual server, size m7g.large, in the region US East: $0.0816 for each hour on demand, which is about $59.57 for each month. With a commitment of 1 year: $0.0599 for each hour. Estimate from a price tracker, June 2026 [S72]
+- AWS data transfer out to the internet (egress): the first 100 GB for each month are free, then $0.09 for each GB for the first 10 TB. Estimate from a price tracker, 2026 [S73]
+&lt;/group&gt;
+
+&lt;group name=&quot;P. Cloud market&quot;&gt;
+- Spend on cloud infrastructure services in quarter 3 of 2026: $167.7 billion, an increase of 55 per cent in one year. AI services are about one third of the total. Estimate [S74]
+- Market shares in quarter 3 of 2026: Amazon (AWS) 26 per cent, Microsoft 19 per cent, Google 16 per cent. Estimate [S74]
+&lt;/group&gt;
+
 &lt;sources&gt;
 [S1] Anthropic, Claude pricing, 3 November 2026. https://platform.claude.com/docs/en/about-claude/pricing
 [S2] OpenAI, API pricing, November 2026. https://developers.openai.com/api/docs/pricing
@@ -429,28 +450,36 @@ A web search on 26 November 2026 supplied these figures. Each figure has a sourc
 [S64] FourWeekMBA, Revenue for each MW on short and long GPU contracts (IREN), 5 November 2026. https://fourweekmba.com/ai-short-gpu-deals-pay-40m-per-mw-1-8x-five-year-contracts/
 [S65] Markaicode, Vast.ai pricing, 16 November 2026. https://markaicode.com/pricing/vast-ai-pricing/
 [S66] The Register, Nvidia Blackwell rack power, 27 March 2024. https://www.theregister.com/2024/03/27/nvidia_blackwell_efficiency/
+[S67] Vercel, Pro plan documentation, 2026. https://vercel.com/docs/plans/pro-plan
+[S68] Supabase, About billing on Supabase, 2026. https://supabase.com/docs/guides/platform/billing-on-supabase
+[S69] Cloudflare, Workers pricing, 2026. https://developers.cloudflare.com/workers/platform/pricing/
+[S70] Cloudflare, Rates for the Workers platform and R2, 2026. https://www.cloudflare.com/rates/
+[S71] AWS, Lambda pricing, 2026. https://aws.amazon.com/lambda/pricing/
+[S72] Holori, AWS m7g.large price, June 2026. https://calculator.holori.com/aws/ec2/m7g.large/us-east-1
+[S73] Egresscost, AWS data transfer pricing, June 2026. https://egresscost.com/aws/data-transfer-pricing
+[S74] Synergy Research Group, Cloud market growth in quarter 3 of 2026. https://www.srgresearch.com/articles/cloud-market-growth-rate-rises-again-in-q3-biggest-ever-sequential-increase
 &lt;/sources&gt;
 &lt;/reference_data&gt;</pre></details>
           </li>
           <li class="blk" id="blk-context">
-            <div class="blk-head"><span class="blk-n">4</span><code class="blk-tag">&lt;context&gt;</code><span class="blk-bar" role="img" aria-label="97 words"><i style="width:3.9%"></i></span><span class="blk-w">97 words</span></div>
+            <div class="blk-head"><span class="blk-n">4</span><code class="blk-tag">&lt;context&gt;</code><span class="blk-bar" role="img" aria-label="146 words"><i style="width:4.9%"></i></span><span class="blk-w">146 words</span></div>
             <dl class="blk-notes"><div><dt>What it does</dt><dd>Describes the reader, the two roles of the reader and the cost of a wrong number.</dd></div><div><dt>Why it is there</dt><dd>The model applies the accuracy rules better when it knows the reason for them.</dd></div><div class="principle"><dt>Principle</dt><dd>Give the motivation</dd></div></dl>
             <details><summary>Read this block</summary><pre>&lt;context&gt;
-The reader is intelligent and busy. The reader reads a profit and loss account with ease, but does not know what a token or a GPU is. The reader will use this knowledge in two roles. As an investor, the reader judges AI companies, data centres and deals. As an operator, the reader helps companies to buy, budget and use AI. The reader will repeat your numbers in meetings with boards and investors, so a wrong number damages the reader&#x27;s reputation. The reader may also share the page with colleagues who have the same background.
+The reader is intelligent and busy. The reader reads a profit and loss account with ease, but does not know what a token or a GPU is. The reader will use this knowledge in two roles. As an investor, the reader judges AI companies, data centres and deals. As an operator, the reader helps companies to buy, budget and use AI. The reader also sponsors software products, and decides with developers which platform to use at each stage. The reader does not write code. The reader will repeat your numbers in meetings with boards and investors, so a wrong number damages the reader&#x27;s reputation. The reader may also share the page with colleagues who have the same background. The long-term goal of the reader is to become an expert in AI, so the course must also show the work that comes after the course.
 &lt;/context&gt;</pre></details>
           </li>
           <li class="blk" id="blk-task">
-            <div class="blk-head"><span class="blk-n">5</span><code class="blk-tag">&lt;task&gt;</code><span class="blk-bar" role="img" aria-label="71 words"><i style="width:2.8%"></i></span><span class="blk-w">71 words</span></div>
+            <div class="blk-head"><span class="blk-n">5</span><code class="blk-tag">&lt;task&gt;</code><span class="blk-bar" role="img" aria-label="71 words"><i style="width:2.4%"></i></span><span class="blk-w">71 words</span></div>
             <dl class="blk-notes"><div><dt>What it does</dt><dd>Asks for one web page and fixes the order in which the course teaches each idea.</dd></div><div><dt>Why it is there</dt><dd>Current models do what the words say. The block asks in plain words for full features that work.</dd></div><div class="principle"><dt>Principle</dt><dd>Ask for the extra effort in words</dd></div></dl>
             <details><summary>Read this block</summary><pre>&lt;task&gt;
 Build a course with the name &quot;AI explained&quot; as one interactive web page. The course teaches the subject in the settings from zero. Teach each idea in the same order: a plain statement, a picture, a worked example with real numbers, and then a short check. Go beyond a basic page. Include each diagram, calculator, table, quiz and glossary in the course plan, and make each one work fully.
 &lt;/task&gt;</pre></details>
           </li>
           <li class="blk" id="blk-success_criteria">
-            <div class="blk-head"><span class="blk-n">6</span><code class="blk-tag">&lt;success_criteria&gt;</code><span class="blk-bar" role="img" aria-label="149 words"><i style="width:6.0%"></i></span><span class="blk-w">149 words</span></div>
-            <dl class="blk-notes"><div><dt>What it does</dt><dd>Lists seven things that the reader can do after one reading.</dd></div><div><dt>Why it is there</dt><dd>The prompt defines success before the work starts, and the quiz must test each item.</dd></div><div class="principle"><dt>Principle</dt><dd>Define success first</dd></div></dl>
+            <div class="blk-head"><span class="blk-n">6</span><code class="blk-tag">&lt;success_criteria&gt;</code><span class="blk-bar" role="img" aria-label="183 words"><i style="width:6.1%"></i></span><span class="blk-w">183 words</span></div>
+            <dl class="blk-notes"><div><dt>What it does</dt><dd>Lists nine things that the reader can do after one reading.</dd></div><div><dt>Why it is there</dt><dd>The prompt defines success before the work starts, and the quiz must test each item.</dd></div><div class="principle"><dt>Principle</dt><dd>Define success first</dd></div></dl>
             <details><summary>Read this block</summary><pre>&lt;success_criteria&gt;
-The course succeeds if the reader can do these seven things after one reading, without help:
+The course succeeds if the reader can do these nine things after one reading, without help:
 1. Explain in two sentences how a language model makes an answer.
 2. Define the 12 core terms: model, parameter, training, inference, token, context window, prompt, GPU, data centre, hyperscaler, utilisation and gross margin.
 3. Calculate the cost of one AI request from its token counts and a price list.
@@ -458,14 +487,16 @@ The course succeeds if the reader can do these seven things after one reading, w
 5. Calculate the cost of one GPU-hour from the purchase price, the useful life, the utilisation and the power cost.
 6. Read 10 core KPIs and say what a high value and a low value mean.
 7. Ask five useful questions about an AI company or about an AI purchase.
-The quiz must test each of the seven criteria with at least one question.
+8. Choose a suitable type of platform for a product need that someone describes, and give the reason.
+9. Explain how an application scales, and name three parts that fail first when use increases.
+The quiz must test each of the nine criteria with at least one question.
 &lt;/success_criteria&gt;</pre></details>
           </li>
           <li class="blk" id="blk-course_plan">
-            <div class="blk-head"><span class="blk-n">7</span><code class="blk-tag">&lt;course_plan&gt;</code><span class="blk-bar" role="img" aria-label="729 words"><i style="width:29.2%"></i></span><span class="blk-w">729 words</span></div>
-            <dl class="blk-notes"><div><dt>What it does</dt><dd>Sets six modules. For each module it lists the ideas, the pictures and the interactive parts.</dd></div><div><dt>Why it is there</dt><dd>A complete list stops the model from leaving out a calculator or a table.</dd></div><div class="principle"><dt>Principle</dt><dd>Say what to do, in order</dd></div></dl>
+            <div class="blk-head"><span class="blk-n">7</span><code class="blk-tag">&lt;course_plan&gt;</code><span class="blk-bar" role="img" aria-label="1,255 words"><i style="width:41.7%"></i></span><span class="blk-w">1,255 words</span></div>
+            <dl class="blk-notes"><div><dt>What it does</dt><dd>Sets seven modules. For each module it lists the ideas, the pictures and the interactive parts.</dd></div><div><dt>Why it is there</dt><dd>A complete list stops the model from leaving out a calculator or a table.</dd></div><div class="principle"><dt>Principle</dt><dd>Say what to do, in order</dd></div></dl>
             <details><summary>Read this block</summary><pre>&lt;course_plan&gt;
-Write six modules in this order. Start each module with one sentence that states what the reader will learn. End each module with three &quot;You can now&quot; statements.
+Write seven modules in this order. Start each module with one sentence that states what the reader will learn. End each module with three &quot;You can now&quot; statements.
 
 Module 1. What AI is
 Teach: AI, machine learning, deep learning, generative AI, large language model (LLM) and agent. A model is a very large mathematical function, and its numbers have the name parameters. Training sets the parameters. Inference uses the parameters to do work.
@@ -482,23 +513,30 @@ Picture: a chart of the fall in token prices, from the reference data.
 Interactive: a token cost calculator. Inputs: the model (from the price list in the reference data), input tokens, output tokens, the share of input that is cached, and requests for each day. Outputs: the cost for each request, each day and each month.
 Worked example: one question of 2,000 tokens with an answer of 500 tokens, on two different models.
 
-Module 4. Infrastructure: the AI factory
+Module 4. AI infrastructure: the AI factory
 Teach: the seven layers (energy, data centre, chips, cloud, model, application, user), with example companies and the direction of the money between layers. What a GPU is and why AI needs it. The ladder from one GPU to a server, a rack, a hall and a campus. kW, MW and GW. Cooling and PUE. Training clusters compared with inference clusters. The chip supply chain (designer, foundry, memory, equipment). The three limits on growth: power, chips and capital.
 Pictures: (a) the seven layers as a stack, with the flow of money, (b) the scale ladder, with the power for each step.
 
-Module 5. Economics and KPIs
+Module 5. Application infrastructure: what to use when
+Teach: the parts of an AI application and the work of each part: front end, back end, database, file storage, sign-in, the model API and the network edge. Four platforms as examples of four types. AWS is a general cloud, which supplies almost each building block and gives the most control for the most work. Supabase is a back end as a service, which supplies a Postgres database with sign-in, file storage and functions. Vercel is a front-end cloud, which hosts the web application and publishes it from the code repository. Cloudflare is an edge network, which supplies a content delivery network (CDN), security, and functions and storage near the user. Where the model sits: a model API from a model company, or the same model through a cloud service such as Amazon Bedrock. How teams combine the four types in one product. What to use when, by stage (prototype, product, scale) and by need (speed, control, compliance, cost). How an application scales: a larger server compared with more servers. Serverless functions compared with servers that run all the time. Why the database is the difficult part. Caches, queues, rate limits and regions. The three parts that fail first when use increases: database connections, rate limits of the model API, and cost. The shape of the cost: a fixed plan and a usage charge, egress fees, and the cost to change supplier.
+Pictures: (a) the path of one request from the browser of the user through the edge, the front end, the back end, the database and the model API, with an example platform on each part. (b) A matrix of needs against the four types of platform. (c) The three stages of growth, with the changes at each stage.
+Interactive: a stack selector. The reader selects the stage, the skill of the team and the most important need. The page shows a suggested combination of platform types, the reason for each part, the fixed plan cost for each month from the reference data, and the first limit that the team will meet. Label the result as a start point for a discussion with the developers.
+Describe each platform by its main purpose only, because the features of platforms change each month. Use the reference data for each plan price and each limit.
+
+Module 6. Economics and KPIs
 Teach four businesses, each with one worked example: (1) the GPU owner: cost for each GPU-hour, rental price, utilisation, depreciation and payback. (2) The data centre: capital cost for each MW, power cost and PUE. (3) The model company: revenue run-rate, gross margin, training cost and inference cost. (4) The application company or AI buyer: cost for each task, seat price compared with usage price, and gross margin after model costs.
 Interactive: a GPU-hour calculator. Inputs: purchase price for each GPU with its share of the server and network, useful life, utilisation, power for each GPU, PUE, electricity price, other cost for each hour, and rental price. Outputs: the cost for each GPU-hour (split into depreciation, power and other), the margin at the rental price, and the payback period.
-Table: a minimum of 20 KPIs. Columns: name, plain definition, unit, formula where one exists, typical value with its date, the meaning of a high or low value, and the user of the KPI (investor, operator or engineer). The reader can filter the table by user.
+Table: a minimum of 25 KPIs, which include five KPIs for applications (response time, uptime, error rate, requests for each second, and cost for each active user). Columns: name, plain definition, unit, formula where one exists, typical value with its date, the meaning of a high or low value, and the user of the KPI (investor, operator or engineer). The reader can filter the table by user.
 
-Module 6. How to use this knowledge
-Teach: the questions that an investor asks (strength of demand, depreciation life, customer concentration, power supply, contract length, price trend). The questions that an operator asks (which tasks, which model size, seat or usage, how to budget, how to measure value, data safety). The main risks, written as questions and not as forecasts.
+Module 7. How to use this knowledge, and the path to expert
+Teach: the questions that an investor asks (strength of demand, depreciation life, customer concentration, power supply, contract length, price trend). The questions that an operator asks (which tasks, which model size, seat or usage, how to budget, how to measure value, data safety). The main risks, written as questions and not as forecasts. Then the path to expert: four levels of skill (aware, fluent, practitioner, expert), with the things that a person at each level can do. A plan of 12 weeks with one practical task for each week, for a reader who has 3 to 4 hours each week. Each task uses the course: for example, calculate the token cost of a real task, read the accounts of one AI company, or build a small application with an AI coding tool on two of the platforms. State clearly that one course gives the map, and that practice makes the expert.
+Picture: the 12 weeks as a timeline in four phases.
 
-After the modules: a quiz of 12 questions with feedback on each answer, a glossary of 50 terms or more that the reader can search, and a list of sources with dates.
+After the modules: a quiz of 15 questions with feedback on each answer, a glossary of 70 terms or more that the reader can search, and a list of sources with dates.
 &lt;/course_plan&gt;</pre></details>
           </li>
           <li class="blk" id="blk-language_rules">
-            <div class="blk-head"><span class="blk-n">8</span><code class="blk-tag">&lt;language_rules&gt;</code><span class="blk-bar" role="img" aria-label="616 words"><i style="width:24.7%"></i></span><span class="blk-w">616 words</span></div>
+            <div class="blk-head"><span class="blk-n">8</span><code class="blk-tag">&lt;language_rules&gt;</code><span class="blk-bar" role="img" aria-label="616 words"><i style="width:20.5%"></i></span><span class="blk-w">616 words</span></div>
             <dl class="blk-notes"><div><dt>What it does</dt><dd>Gives ten writing rules and five pairs of text, before and after the rules.</dd></div><div><dt>Why it is there</dt><dd>Examples control style more reliably than rules. Each of the five pairs is a different kind of sentence.</dd></div><div class="principle"><dt>Principle</dt><dd>Use three to five examples</dd></div></dl>
             <details><summary>Read this block</summary><pre>&lt;language_rules&gt;
 Write all course text to the writing rules of ASD-STE100 Simplified Technical English. This standard removes ambiguity, so a reader with no technical training understands each sentence at the first reading. Where the house rules below are different from STE, the house rules apply.
@@ -542,14 +580,14 @@ After: The context window is the text that the model can read at one time. You c
 &lt;/language_rules&gt;</pre></details>
           </li>
           <li class="blk" id="blk-visual_rules">
-            <div class="blk-head"><span class="blk-n">9</span><code class="blk-tag">&lt;visual_rules&gt;</code><span class="blk-bar" role="img" aria-label="157 words"><i style="width:6.3%"></i></span><span class="blk-w">157 words</span></div>
+            <div class="blk-head"><span class="blk-n">9</span><code class="blk-tag">&lt;visual_rules&gt;</code><span class="blk-bar" role="img" aria-label="157 words"><i style="width:5.2%"></i></span><span class="blk-w">157 words</span></div>
             <dl class="blk-notes"><div><dt>What it does</dt><dd>Defines a useful picture and requires that each interactive part works.</dd></div><div><dt>Why it is there</dt><dd>Models add few interactive parts unless the prompt asks for them.</dd></div><div class="principle"><dt>Principle</dt><dd>Ask for visuals in words</dd></div></dl>
             <details><summary>Read this block</summary><pre>&lt;visual_rules&gt;
 The reader learns faster from pictures than from text, so each module needs a minimum of one diagram that shows a real mechanism. A picture that only decorates the page does not count. Draw each diagram and chart as inline SVG, and label it in the same simple English as the text. Give each picture a caption that states what the reader must see in it. Make the calculators, the table filter, the quiz and the glossary search work without an external library. Show a filled example in each calculator when the page opens, so that the first view teaches something. Add a contents list that stays in view and shows the reader&#x27;s position in the course. Use motion only where it explains a sequence, and obey the reader&#x27;s reduced-motion setting. The page must work on a phone, in a light theme and in a dark theme, and each control must work from the keyboard.
 &lt;/visual_rules&gt;</pre></details>
           </li>
           <li class="blk" id="blk-design_system">
-            <div class="blk-head"><span class="blk-n">10</span><code class="blk-tag">&lt;design_system&gt;</code><span class="blk-bar" role="img" aria-label="263 words"><i style="width:10.5%"></i></span><span class="blk-w">263 words</span></div>
+            <div class="blk-head"><span class="blk-n">10</span><code class="blk-tag">&lt;design_system&gt;</code><span class="blk-bar" role="img" aria-label="263 words"><i style="width:8.7%"></i></span><span class="blk-w">263 words</span></div>
             <dl class="blk-notes"><div><dt>What it does</dt><dd>Gives the Ārahi typeface, colours, shapes and layout rules.</dd></div><div><dt>Why it is there</dt><dd>A named design system is a more exact instruction than a general request for good design.</dd></div><div class="principle"><dt>Principle</dt><dd>Use the brand, not a generic block</dd></div></dl>
             <details><summary>Read this block</summary><pre>&lt;design_system&gt;
 Use the Ārahi 2027 brand. The brand is calm, precise and editorial, and its confidence comes from restraint and typography.
@@ -564,7 +602,7 @@ Use the Ārahi 2027 brand. The brand is calm, precise and editorial, and its con
 &lt;/design_system&gt;</pre></details>
           </li>
           <li class="blk" id="blk-accuracy_rules">
-            <div class="blk-head"><span class="blk-n">11</span><code class="blk-tag">&lt;accuracy_rules&gt;</code><span class="blk-bar" role="img" aria-label="213 words"><i style="width:8.5%"></i></span><span class="blk-w">213 words</span></div>
+            <div class="blk-head"><span class="blk-n">11</span><code class="blk-tag">&lt;accuracy_rules&gt;</code><span class="blk-bar" role="img" aria-label="227 words"><i style="width:7.5%"></i></span><span class="blk-w">227 words</span></div>
             <dl class="blk-notes"><div><dt>What it does</dt><dd>Limits each figure to the reference data and tells the model how to show doubt.</dd></div><div><dt>Why it is there</dt><dd>You will repeat these numbers in meetings, so each number needs a date and a source.</dd></div><div class="principle"><dt>Principle</dt><dd>Ground the answer in the data</dd></div></dl>
             <details><summary>Read this block</summary><pre>&lt;accuracy_rules&gt;
 1. For each price, cost and company number, use only the figures in the reference data. The reader will repeat these numbers, and a number from memory can be out of date.
@@ -572,26 +610,26 @@ Use the Ārahi 2027 brand. The brand is calm, precise and editorial, and its con
 3. Where the reference data give a range, show the range. Where the reference data mark a figure as uncertain, tell the reader that it is uncertain.
 4. If the course needs a figure that is not in the reference data, do not supply one from memory. Use an example value in a calculator and label it &quot;example value&quot;, or tell the reader that the figure is not available.
 5. You can explain how the technology works from your general knowledge. Make each explanation simple, but do not make it false. Where a simple explanation hides an important detail, add a short note that starts with &quot;Simplified:&quot;.
-6. Stay neutral about companies. Do not give investment advice. Write each risk as a question that the reader can ask.
+6. Stay neutral about companies and platforms. Do not give investment advice. For each platform, state a strength and a cost of that strength. Write each risk as a question that the reader can ask.
 7. State in the footer that the text follows the writing rules of ASD-STE100, and that no formal check against the STE dictionary was done.
 &lt;/accuracy_rules&gt;</pre></details>
           </li>
           <li class="blk" id="blk-output_format">
-            <div class="blk-head"><span class="blk-n">12</span><code class="blk-tag">&lt;output_format&gt;</code><span class="blk-bar" role="img" aria-label="62 words"><i style="width:2.5%"></i></span><span class="blk-w">62 words</span></div>
+            <div class="blk-head"><span class="blk-n">12</span><code class="blk-tag">&lt;output_format&gt;</code><span class="blk-bar" role="img" aria-label="62 words"><i style="width:2.1%"></i></span><span class="blk-w">62 words</span></div>
             <dl class="blk-notes"><div><dt>What it does</dt><dd>Asks for one HTML file and a report of 150 words or fewer.</dd></div><div><dt>Why it is there</dt><dd>The report shows each gap in the data, so you know what to check.</dd></div><div class="principle"><dt>Principle</dt><dd>State the format in positive words</dd></div></dl>
             <details><summary>Read this block</summary><pre>&lt;output_format&gt;
 Give the course as one HTML file that contains its styles and scripts. Load only the Jost typeface from Google Fonts. After the file, write a report of 150 words or fewer in the same simple English. The report states what you built, each figure that was not in the reference data, and each rule that you could not obey.
 &lt;/output_format&gt;</pre></details>
           </li>
           <li class="blk" id="blk-self_check">
-            <div class="blk-head"><span class="blk-n">13</span><code class="blk-tag">&lt;self_check&gt;</code><span class="blk-bar" role="img" aria-label="165 words"><i style="width:6.6%"></i></span><span class="blk-w">165 words</span></div>
+            <div class="blk-head"><span class="blk-n">13</span><code class="blk-tag">&lt;self_check&gt;</code><span class="blk-bar" role="img" aria-label="177 words"><i style="width:5.9%"></i></span><span class="blk-w">177 words</span></div>
             <dl class="blk-notes"><div><dt>What it does</dt><dd>Lists eight checks, with one test value for the token calculator.</dd></div><div><dt>Why it is there</dt><dd>A final check catches errors in numbers, in calculators and in sentence length.</dd></div><div class="principle"><dt>Principle</dt><dd>End with a self-check</dd></div></dl>
             <details><summary>Read this block</summary><pre>&lt;self_check&gt;
 Before you finish, check your work against this list and correct each failure:
-1. Each of the seven success criteria is taught in a module and tested in the quiz.
+1. Each of the nine success criteria is taught in a module and tested in the quiz.
 2. Each price, cost and company number agrees with the reference data and shows its date.
 3. The token cost calculator gives $0.009 for 2,000 input tokens and 500 output tokens at prices of $2 and $10 for each million tokens.
-4. The GPU-hour calculator gives the same result as a calculation that you do by hand from its default values.
+4. The GPU-hour calculator gives the same result as a calculation that you do by hand from its default values. The stack selector gives a result for each combination of its inputs.
 5. Each technical term has a definition at its first use and an entry in the glossary.
 6. No description has more than 25 words in one sentence, and no instruction has more than 20 words.
 7. The text has no em dashes, no semicolons, no exclamation marks and no emoji.
@@ -648,19 +686,24 @@ Before you finish, check your work against this list and correct each failure:
 
       <section id="run">
         <h2>The test run</h2>
-        <p class="strap">The test run is in progress.</p>
+        <p class="strap">The test run of version 1.1 is in progress.</p>
         <ol class="flow" style="--n:6">
-          <li><b>Research</b><span>Three research runs searched the web for prices, costs and company figures.</span></li>
-          <li><b>Reference data</b><span>74 figures went into the prompt, each with a date, a label and a source.</span></li>
+          <li><b>Research</b><span>Research runs searched the web for prices, costs and company figures.</span></li>
+          <li><b>Reference data</b><span>86 figures went into the prompt, each with a date, a label and a source.</span></li>
           <li><b>Prompt</b><span>The thirteen blocks were written and read as a stranger reads them.</span></li>
           <li><b>Fresh session</b><span>A new session with no memory of this work received only the prompt.</span></li>
-          <li><b>Review</b><span>A review compared the page with the seven tests and the reference data.</span></li>
+          <li><b>Review</b><span>A review compared the page with the nine tests and the reference data.</span></li>
           <li class="is-point"><b>Course</b><span>The corrected page is the course that you received.</span></li>
         </ol>
-
+        <div class="prose"><h3>Version history</h3></div>
+        <ul class="changes">
+          <li>Version 1.0 had six modules. Its test run was stopped when your second request arrived.</li>
+          <li>Version 1.1 adds Module 5 on application infrastructure, with a stack selector.</li>
+          <li>Version 1.1 also adds the path to expert in Module 7, two more success tests and 12 more figures on platform prices.</li>
+        </ul>
         <div class="prose">
           <h3>Limits of the data</h3>
-          <p>All figures came from web search results on 26 November 2026. The research could not open the pages of the companies, so no figure was read at its first source. A second search confirmed five figures: the Anthropic revenue, the OpenAI prices, the Nvidia results, the H100 rental prices and the fall in token prices. Check a figure at its source before you use it in a board paper.</p>
+          <p>Almost all figures came from web search results on 26 November 2026. The research could not open the pages of most companies, so those figures were not read at their first source. The Supabase prices are the exception, because they came from the Supabase documentation. A second search confirmed five figures: the Anthropic revenue, the OpenAI prices, the Nvidia results, the H100 rental prices and the fall in token prices. Check a figure at its source before you use it in a board paper.</p>
         </div>
       </section>
 
@@ -668,15 +711,15 @@ Before you finish, check your work against this list and correct each failure:
         <h2>How to use the prompt again</h2>
         <p class="strap">Change the settings block, replace the reference data, and run the prompt in a new conversation.</p>
         <ol class="steps">
-          <li>Change the seven lines of the settings block for your new reader or your new subject.</li>
+          <li>Change the eight lines of the settings block for your new reader or your new subject.</li>
           <li>Replace the reference data with new figures. Give each figure a date, a label and a source key.</li>
           <li>Paste the full prompt into a new conversation with a strong model. A new conversation has no memory of old work, so the test is fair.</li>
           <li>Read the short report at the end of the answer. The report lists each figure that was not in the data.</li>
-          <li>Compare the result with the seven success tests before you share it.</li>
+          <li>Compare the result with the nine success tests before you share it.</li>
         </ol>
         <h3>Public skills on GitHub that can help</h3>
         <div class="prose">
-          <p>You already have skills for research, diagrams and web pages, so no new skill for visuals is necessary. Four public skills add a language checker, a tutor and a source check, which your installed set does not have.</p>
+          <p>You already have skills for research, diagrams and web pages, so no new skill for visuals is necessary. The first four rows add a language checker, a tutor and a source check, which your installed set does not have. The last four rows are the official skill sets of the four platforms in Module 5. They help an AI coding tool to do correct work on each platform, which is useful for the practical tasks in the 12-week plan.</p>
         </div>
         <div class="scroll">
           <table>
@@ -686,6 +729,10 @@ Before you finish, check your work against this list and correct each failure:
               <tr><td><a href="https://github.com/citypaul/.dotfiles">teach-me</a><br><span class="note">citypaul, 763 stars for the repository, MIT</span></td><td>A tutor for any subject, with recall questions, spaced review and a glossary</td><td>Copy the folder <code>claude/.claude/skills/teach-me</code></td><td>It is a personal repository. Do not run its installer scripts.</td></tr>
               <tr><td><a href="https://github.com/jamditis/claude-skills-journalism">fact-check-workflow and source-verification</a><br><span class="note">jamditis, 462 stars, MIT</span></td><td>Checks each claim against its source and ranks the evidence</td><td>Copy the two folders from <code>journalism-core/skills</code></td><td>Some steps are for newsrooms and are not relevant here.</td></tr>
               <tr><td><a href="https://github.com/nicobailon/visual-explainer">visual-explainer</a><br><span class="note">nicobailon, 11.3k stars, MIT</span></td><td>Builds HTML explainers, diagrams and slides</td><td><code>/plugin marketplace add nicobailon/visual-explainer</code></td><td>It runs a Node script, and it overlaps with skills that you have. Install it only if you want a second style of diagram.</td></tr>
+              <tr><td><a href="https://github.com/supabase/agent-skills">supabase/agent-skills</a><br><span class="note">Supabase, 3.1k stars, MIT</span></td><td>Rules for correct and safe work with a Supabase database</td><td><code>npx skills add supabase/agent-skills</code></td><td>It is for developers. Use it when an AI coding tool changes a database.</td></tr>
+              <tr><td><a href="https://github.com/vercel-labs/agent-skills">vercel-labs/agent-skills</a><br><span class="note">Vercel, 35.0k stars, MIT</span></td><td>Eight skills for web applications, which include publishing to Vercel</td><td><code>npx skills add vercel-labs/agent-skills</code></td><td>Most of the skills are about one web framework. Install only the skills that you need.</td></tr>
+              <tr><td><a href="https://github.com/cloudflare/skills">cloudflare/skills</a><br><span class="note">Cloudflare, 3.5k stars, Apache-2.0</span></td><td>24 skills for work on the Cloudflare platform</td><td><code>/plugin marketplace add cloudflare/skills</code></td><td>The set is large. Read the list before you install all of it.</td></tr>
+              <tr><td><a href="https://github.com/awslabs/agent-plugins">awslabs/agent-plugins</a><br><span class="note">AWS, star count not checked</span></td><td>Plugins that help an AI coding tool to design and operate systems on AWS</td><td><code>/plugin marketplace add awslabs/agent-plugins</code></td><td>I confirmed this repository through a search result only, and I did not open it.</td></tr>
             </tbody>
           </table>
         </div>
@@ -697,7 +744,7 @@ Before you finish, check your work against this list and correct each failure:
         <p class="strap">Copy the text into a new conversation to build the course again.</p>
         <div class="promptbar">
           <button type="button" id="copy-btn">Copy the prompt</button>
-          <span id="copy-state" role="status">Version 1.0, 26 November 2026</span>
+          <span id="copy-state" role="status">Version 1.1, 26 November 2026</span>
         </div>
         <pre id="full-prompt" tabindex="0">&lt;role&gt;
 You are a senior technology teacher who writes for business readers. You explain artificial intelligence (AI) to readers who have no technical training, and you write in ASD-STE100 Simplified Technical English.
@@ -705,10 +752,11 @@ You are a senior technology teacher who writes for business readers. You explain
 
 &lt;settings&gt;
 These settings come from the reader&#x27;s answers to four questions. Change them to use this prompt for a different reader or a different subject.
-- Subject: how AI works, the infrastructure behind AI, and the economics of AI
+- Subject: how AI works, the infrastructure behind AI, the application infrastructure that developers use to build products (for example AWS, Supabase, Vercel and Cloudflare), and the economics of AI
 - Reader: a director at a private equity advisory firm, with no technical training and full fluency in company accounts
 - Purpose: all views. The basics of how AI works (tokens, input and output), the investor view and the operator view
-- Depth: full course, six modules, 60 to 90 minutes to read
+- Goal of the reader: to become an expert in AI
+- Depth: full course, seven modules, 75 to 110 minutes to read, and a learning path of 12 weeks after the course
 - Format: one interactive web page
 - Date of the data: 26 November 2026
 - Currency: US dollars, because the AI market quotes its prices in US dollars
@@ -836,6 +884,24 @@ A web search on 26 November 2026 supplied these figures. Each figure has a sourc
 - OpenAI: average 0.34 Wh. Reported with no method, old source of June 2025 [S50]
 &lt;/group&gt;
 
+&lt;group name=&quot;O. Application platforms: plan prices and limits, November 2026&quot;&gt;
+- Vercel: the Hobby plan is free, with usage caps. The Pro plan costs $20 for each month, and includes one seat that can publish and $20 of usage credit. Each extra seat costs $20 for each month. The Enterprise plan has a custom price. Reported, read through a search summary [S67]
+- Supabase Free plan: 2 projects, a database of 500 MB for each project, 50,000 monthly active users, 1 GB of file storage and 5 GB of egress. Reported [S68]
+- Supabase Pro plan: $25 for each month. It includes $10 of compute credit, 8 GB of disk for each project, 100,000 monthly active users, 100 GB of file storage and 250 GB of egress. Reported [S68]
+- Supabase compute: each project has its own Postgres server. The Micro size costs about $10 for each month and the Small size about $15. The largest size has 64 cores and 256 GB of memory. Reported [S68]
+- Supabase charges above the plan: $0.09 for each GB of egress, and $0.00325 for each extra monthly active user. Reported [S68]
+- Cloudflare Workers: the Free plan permits 100,000 requests each day. The Paid plan has a minimum charge of $5 for each month, and includes 10 million requests for each month. Extra requests cost $0.30 for each million. Cloudflare does not charge for egress. Reported, read through a search summary [S69]
+- Cloudflare R2 file storage: $0.015 for each GB for each month, with the first 10 GB free and no egress fee. Reported, read through a search summary [S70]
+- AWS Lambda functions: $0.20 for each million requests, and $0.0000166667 for each GB-second of compute. Each month, the first 1 million requests and 400,000 GB-seconds are free. Reported, read through secondary pages [S71]
+- AWS EC2 virtual server, size m7g.large, in the region US East: $0.0816 for each hour on demand, which is about $59.57 for each month. With a commitment of 1 year: $0.0599 for each hour. Estimate from a price tracker, June 2026 [S72]
+- AWS data transfer out to the internet (egress): the first 100 GB for each month are free, then $0.09 for each GB for the first 10 TB. Estimate from a price tracker, 2026 [S73]
+&lt;/group&gt;
+
+&lt;group name=&quot;P. Cloud market&quot;&gt;
+- Spend on cloud infrastructure services in quarter 3 of 2026: $167.7 billion, an increase of 55 per cent in one year. AI services are about one third of the total. Estimate [S74]
+- Market shares in quarter 3 of 2026: Amazon (AWS) 26 per cent, Microsoft 19 per cent, Google 16 per cent. Estimate [S74]
+&lt;/group&gt;
+
 &lt;sources&gt;
 [S1] Anthropic, Claude pricing, 3 November 2026. https://platform.claude.com/docs/en/about-claude/pricing
 [S2] OpenAI, API pricing, November 2026. https://developers.openai.com/api/docs/pricing
@@ -903,11 +969,19 @@ A web search on 26 November 2026 supplied these figures. Each figure has a sourc
 [S64] FourWeekMBA, Revenue for each MW on short and long GPU contracts (IREN), 5 November 2026. https://fourweekmba.com/ai-short-gpu-deals-pay-40m-per-mw-1-8x-five-year-contracts/
 [S65] Markaicode, Vast.ai pricing, 16 November 2026. https://markaicode.com/pricing/vast-ai-pricing/
 [S66] The Register, Nvidia Blackwell rack power, 27 March 2024. https://www.theregister.com/2024/03/27/nvidia_blackwell_efficiency/
+[S67] Vercel, Pro plan documentation, 2026. https://vercel.com/docs/plans/pro-plan
+[S68] Supabase, About billing on Supabase, 2026. https://supabase.com/docs/guides/platform/billing-on-supabase
+[S69] Cloudflare, Workers pricing, 2026. https://developers.cloudflare.com/workers/platform/pricing/
+[S70] Cloudflare, Rates for the Workers platform and R2, 2026. https://www.cloudflare.com/rates/
+[S71] AWS, Lambda pricing, 2026. https://aws.amazon.com/lambda/pricing/
+[S72] Holori, AWS m7g.large price, June 2026. https://calculator.holori.com/aws/ec2/m7g.large/us-east-1
+[S73] Egresscost, AWS data transfer pricing, June 2026. https://egresscost.com/aws/data-transfer-pricing
+[S74] Synergy Research Group, Cloud market growth in quarter 3 of 2026. https://www.srgresearch.com/articles/cloud-market-growth-rate-rises-again-in-q3-biggest-ever-sequential-increase
 &lt;/sources&gt;
 &lt;/reference_data&gt;
 
 &lt;context&gt;
-The reader is intelligent and busy. The reader reads a profit and loss account with ease, but does not know what a token or a GPU is. The reader will use this knowledge in two roles. As an investor, the reader judges AI companies, data centres and deals. As an operator, the reader helps companies to buy, budget and use AI. The reader will repeat your numbers in meetings with boards and investors, so a wrong number damages the reader&#x27;s reputation. The reader may also share the page with colleagues who have the same background.
+The reader is intelligent and busy. The reader reads a profit and loss account with ease, but does not know what a token or a GPU is. The reader will use this knowledge in two roles. As an investor, the reader judges AI companies, data centres and deals. As an operator, the reader helps companies to buy, budget and use AI. The reader also sponsors software products, and decides with developers which platform to use at each stage. The reader does not write code. The reader will repeat your numbers in meetings with boards and investors, so a wrong number damages the reader&#x27;s reputation. The reader may also share the page with colleagues who have the same background. The long-term goal of the reader is to become an expert in AI, so the course must also show the work that comes after the course.
 &lt;/context&gt;
 
 &lt;task&gt;
@@ -915,7 +989,7 @@ Build a course with the name &quot;AI explained&quot; as one interactive web pag
 &lt;/task&gt;
 
 &lt;success_criteria&gt;
-The course succeeds if the reader can do these seven things after one reading, without help:
+The course succeeds if the reader can do these nine things after one reading, without help:
 1. Explain in two sentences how a language model makes an answer.
 2. Define the 12 core terms: model, parameter, training, inference, token, context window, prompt, GPU, data centre, hyperscaler, utilisation and gross margin.
 3. Calculate the cost of one AI request from its token counts and a price list.
@@ -923,11 +997,13 @@ The course succeeds if the reader can do these seven things after one reading, w
 5. Calculate the cost of one GPU-hour from the purchase price, the useful life, the utilisation and the power cost.
 6. Read 10 core KPIs and say what a high value and a low value mean.
 7. Ask five useful questions about an AI company or about an AI purchase.
-The quiz must test each of the seven criteria with at least one question.
+8. Choose a suitable type of platform for a product need that someone describes, and give the reason.
+9. Explain how an application scales, and name three parts that fail first when use increases.
+The quiz must test each of the nine criteria with at least one question.
 &lt;/success_criteria&gt;
 
 &lt;course_plan&gt;
-Write six modules in this order. Start each module with one sentence that states what the reader will learn. End each module with three &quot;You can now&quot; statements.
+Write seven modules in this order. Start each module with one sentence that states what the reader will learn. End each module with three &quot;You can now&quot; statements.
 
 Module 1. What AI is
 Teach: AI, machine learning, deep learning, generative AI, large language model (LLM) and agent. A model is a very large mathematical function, and its numbers have the name parameters. Training sets the parameters. Inference uses the parameters to do work.
@@ -944,19 +1020,26 @@ Picture: a chart of the fall in token prices, from the reference data.
 Interactive: a token cost calculator. Inputs: the model (from the price list in the reference data), input tokens, output tokens, the share of input that is cached, and requests for each day. Outputs: the cost for each request, each day and each month.
 Worked example: one question of 2,000 tokens with an answer of 500 tokens, on two different models.
 
-Module 4. Infrastructure: the AI factory
+Module 4. AI infrastructure: the AI factory
 Teach: the seven layers (energy, data centre, chips, cloud, model, application, user), with example companies and the direction of the money between layers. What a GPU is and why AI needs it. The ladder from one GPU to a server, a rack, a hall and a campus. kW, MW and GW. Cooling and PUE. Training clusters compared with inference clusters. The chip supply chain (designer, foundry, memory, equipment). The three limits on growth: power, chips and capital.
 Pictures: (a) the seven layers as a stack, with the flow of money, (b) the scale ladder, with the power for each step.
 
-Module 5. Economics and KPIs
+Module 5. Application infrastructure: what to use when
+Teach: the parts of an AI application and the work of each part: front end, back end, database, file storage, sign-in, the model API and the network edge. Four platforms as examples of four types. AWS is a general cloud, which supplies almost each building block and gives the most control for the most work. Supabase is a back end as a service, which supplies a Postgres database with sign-in, file storage and functions. Vercel is a front-end cloud, which hosts the web application and publishes it from the code repository. Cloudflare is an edge network, which supplies a content delivery network (CDN), security, and functions and storage near the user. Where the model sits: a model API from a model company, or the same model through a cloud service such as Amazon Bedrock. How teams combine the four types in one product. What to use when, by stage (prototype, product, scale) and by need (speed, control, compliance, cost). How an application scales: a larger server compared with more servers. Serverless functions compared with servers that run all the time. Why the database is the difficult part. Caches, queues, rate limits and regions. The three parts that fail first when use increases: database connections, rate limits of the model API, and cost. The shape of the cost: a fixed plan and a usage charge, egress fees, and the cost to change supplier.
+Pictures: (a) the path of one request from the browser of the user through the edge, the front end, the back end, the database and the model API, with an example platform on each part. (b) A matrix of needs against the four types of platform. (c) The three stages of growth, with the changes at each stage.
+Interactive: a stack selector. The reader selects the stage, the skill of the team and the most important need. The page shows a suggested combination of platform types, the reason for each part, the fixed plan cost for each month from the reference data, and the first limit that the team will meet. Label the result as a start point for a discussion with the developers.
+Describe each platform by its main purpose only, because the features of platforms change each month. Use the reference data for each plan price and each limit.
+
+Module 6. Economics and KPIs
 Teach four businesses, each with one worked example: (1) the GPU owner: cost for each GPU-hour, rental price, utilisation, depreciation and payback. (2) The data centre: capital cost for each MW, power cost and PUE. (3) The model company: revenue run-rate, gross margin, training cost and inference cost. (4) The application company or AI buyer: cost for each task, seat price compared with usage price, and gross margin after model costs.
 Interactive: a GPU-hour calculator. Inputs: purchase price for each GPU with its share of the server and network, useful life, utilisation, power for each GPU, PUE, electricity price, other cost for each hour, and rental price. Outputs: the cost for each GPU-hour (split into depreciation, power and other), the margin at the rental price, and the payback period.
-Table: a minimum of 20 KPIs. Columns: name, plain definition, unit, formula where one exists, typical value with its date, the meaning of a high or low value, and the user of the KPI (investor, operator or engineer). The reader can filter the table by user.
+Table: a minimum of 25 KPIs, which include five KPIs for applications (response time, uptime, error rate, requests for each second, and cost for each active user). Columns: name, plain definition, unit, formula where one exists, typical value with its date, the meaning of a high or low value, and the user of the KPI (investor, operator or engineer). The reader can filter the table by user.
 
-Module 6. How to use this knowledge
-Teach: the questions that an investor asks (strength of demand, depreciation life, customer concentration, power supply, contract length, price trend). The questions that an operator asks (which tasks, which model size, seat or usage, how to budget, how to measure value, data safety). The main risks, written as questions and not as forecasts.
+Module 7. How to use this knowledge, and the path to expert
+Teach: the questions that an investor asks (strength of demand, depreciation life, customer concentration, power supply, contract length, price trend). The questions that an operator asks (which tasks, which model size, seat or usage, how to budget, how to measure value, data safety). The main risks, written as questions and not as forecasts. Then the path to expert: four levels of skill (aware, fluent, practitioner, expert), with the things that a person at each level can do. A plan of 12 weeks with one practical task for each week, for a reader who has 3 to 4 hours each week. Each task uses the course: for example, calculate the token cost of a real task, read the accounts of one AI company, or build a small application with an AI coding tool on two of the platforms. State clearly that one course gives the map, and that practice makes the expert.
+Picture: the 12 weeks as a timeline in four phases.
 
-After the modules: a quiz of 12 questions with feedback on each answer, a glossary of 50 terms or more that the reader can search, and a list of sources with dates.
+After the modules: a quiz of 15 questions with feedback on each answer, a glossary of 70 terms or more that the reader can search, and a list of sources with dates.
 &lt;/course_plan&gt;
 
 &lt;language_rules&gt;
@@ -1022,7 +1105,7 @@ Use the Ārahi 2027 brand. The brand is calm, precise and editorial, and its con
 3. Where the reference data give a range, show the range. Where the reference data mark a figure as uncertain, tell the reader that it is uncertain.
 4. If the course needs a figure that is not in the reference data, do not supply one from memory. Use an example value in a calculator and label it &quot;example value&quot;, or tell the reader that the figure is not available.
 5. You can explain how the technology works from your general knowledge. Make each explanation simple, but do not make it false. Where a simple explanation hides an important detail, add a short note that starts with &quot;Simplified:&quot;.
-6. Stay neutral about companies. Do not give investment advice. Write each risk as a question that the reader can ask.
+6. Stay neutral about companies and platforms. Do not give investment advice. For each platform, state a strength and a cost of that strength. Write each risk as a question that the reader can ask.
 7. State in the footer that the text follows the writing rules of ASD-STE100, and that no formal check against the STE dictionary was done.
 &lt;/accuracy_rules&gt;
 
@@ -1032,10 +1115,10 @@ Give the course as one HTML file that contains its styles and scripts. Load only
 
 &lt;self_check&gt;
 Before you finish, check your work against this list and correct each failure:
-1. Each of the seven success criteria is taught in a module and tested in the quiz.
+1. Each of the nine success criteria is taught in a module and tested in the quiz.
 2. Each price, cost and company number agrees with the reference data and shows its date.
 3. The token cost calculator gives $0.009 for 2,000 input tokens and 500 output tokens at prices of $2 and $10 for each million tokens.
-4. The GPU-hour calculator gives the same result as a calculation that you do by hand from its default values.
+4. The GPU-hour calculator gives the same result as a calculation that you do by hand from its default values. The stack selector gives a result for each combination of its inputs.
 5. Each technical term has a definition at its first use and an entry in the glossary.
 6. No description has more than 25 words in one sentence, and no instruction has more than 20 words.
 7. The text has no em dashes, no semicolons, no exclamation marks and no emoji.

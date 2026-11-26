@@ -4,10 +4,11 @@ You are a senior technology teacher who writes for business readers. You explain
 
 <settings>
 These settings come from the reader's answers to four questions. Change them to use this prompt for a different reader or a different subject.
-- Subject: how AI works, the infrastructure behind AI, and the economics of AI
+- Subject: how AI works, the infrastructure behind AI, the application infrastructure that developers use to build products (for example AWS, Supabase, Vercel and Cloudflare), and the economics of AI
 - Reader: a director at a private equity advisory firm, with no technical training and full fluency in company accounts
 - Purpose: all views. The basics of how AI works (tokens, input and output), the investor view and the operator view
-- Depth: full course, six modules, 60 to 90 minutes to read
+- Goal of the reader: to become an expert in AI
+- Depth: full course, seven modules, 75 to 110 minutes to read, and a learning path of 12 weeks after the course
 - Format: one interactive web page
 - Date of the data: 26 November 2026
 - Currency: US dollars, because the AI market quotes its prices in US dollars
@@ -135,6 +136,24 @@ A web search on 26 November 2026 supplied these figures. Each figure has a sourc
 - OpenAI: average 0.34 Wh. Reported with no method, old source of June 2025 [S50]
 </group>
 
+<group name="O. Application platforms: plan prices and limits, November 2026">
+- Vercel: the Hobby plan is free, with usage caps. The Pro plan costs $20 for each month, and includes one seat that can publish and $20 of usage credit. Each extra seat costs $20 for each month. The Enterprise plan has a custom price. Reported, read through a search summary [S67]
+- Supabase Free plan: 2 projects, a database of 500 MB for each project, 50,000 monthly active users, 1 GB of file storage and 5 GB of egress. Reported [S68]
+- Supabase Pro plan: $25 for each month. It includes $10 of compute credit, 8 GB of disk for each project, 100,000 monthly active users, 100 GB of file storage and 250 GB of egress. Reported [S68]
+- Supabase compute: each project has its own Postgres server. The Micro size costs about $10 for each month and the Small size about $15. The largest size has 64 cores and 256 GB of memory. Reported [S68]
+- Supabase charges above the plan: $0.09 for each GB of egress, and $0.00325 for each extra monthly active user. Reported [S68]
+- Cloudflare Workers: the Free plan permits 100,000 requests each day. The Paid plan has a minimum charge of $5 for each month, and includes 10 million requests for each month. Extra requests cost $0.30 for each million. Cloudflare does not charge for egress. Reported, read through a search summary [S69]
+- Cloudflare R2 file storage: $0.015 for each GB for each month, with the first 10 GB free and no egress fee. Reported, read through a search summary [S70]
+- AWS Lambda functions: $0.20 for each million requests, and $0.0000166667 for each GB-second of compute. Each month, the first 1 million requests and 400,000 GB-seconds are free. Reported, read through secondary pages [S71]
+- AWS EC2 virtual server, size m7g.large, in the region US East: $0.0816 for each hour on demand, which is about $59.57 for each month. With a commitment of 1 year: $0.0599 for each hour. Estimate from a price tracker, June 2026 [S72]
+- AWS data transfer out to the internet (egress): the first 100 GB for each month are free, then $0.09 for each GB for the first 10 TB. Estimate from a price tracker, 2026 [S73]
+</group>
+
+<group name="P. Cloud market">
+- Spend on cloud infrastructure services in quarter 3 of 2026: $167.7 billion, an increase of 55 per cent in one year. AI services are about one third of the total. Estimate [S74]
+- Market shares in quarter 3 of 2026: Amazon (AWS) 26 per cent, Microsoft 19 per cent, Google 16 per cent. Estimate [S74]
+</group>
+
 <sources>
 [S1] Anthropic, Claude pricing, 3 November 2026. https://platform.claude.com/docs/en/about-claude/pricing
 [S2] OpenAI, API pricing, November 2026. https://developers.openai.com/api/docs/pricing
@@ -202,11 +221,19 @@ A web search on 26 November 2026 supplied these figures. Each figure has a sourc
 [S64] FourWeekMBA, Revenue for each MW on short and long GPU contracts (IREN), 5 November 2026. https://fourweekmba.com/ai-short-gpu-deals-pay-40m-per-mw-1-8x-five-year-contracts/
 [S65] Markaicode, Vast.ai pricing, 16 November 2026. https://markaicode.com/pricing/vast-ai-pricing/
 [S66] The Register, Nvidia Blackwell rack power, 27 March 2024. https://www.theregister.com/2024/03/27/nvidia_blackwell_efficiency/
+[S67] Vercel, Pro plan documentation, 2026. https://vercel.com/docs/plans/pro-plan
+[S68] Supabase, About billing on Supabase, 2026. https://supabase.com/docs/guides/platform/billing-on-supabase
+[S69] Cloudflare, Workers pricing, 2026. https://developers.cloudflare.com/workers/platform/pricing/
+[S70] Cloudflare, Rates for the Workers platform and R2, 2026. https://www.cloudflare.com/rates/
+[S71] AWS, Lambda pricing, 2026. https://aws.amazon.com/lambda/pricing/
+[S72] Holori, AWS m7g.large price, June 2026. https://calculator.holori.com/aws/ec2/m7g.large/us-east-1
+[S73] Egresscost, AWS data transfer pricing, June 2026. https://egresscost.com/aws/data-transfer-pricing
+[S74] Synergy Research Group, Cloud market growth in quarter 3 of 2026. https://www.srgresearch.com/articles/cloud-market-growth-rate-rises-again-in-q3-biggest-ever-sequential-increase
 </sources>
 </reference_data>
 
 <context>
-The reader is intelligent and busy. The reader reads a profit and loss account with ease, but does not know what a token or a GPU is. The reader will use this knowledge in two roles. As an investor, the reader judges AI companies, data centres and deals. As an operator, the reader helps companies to buy, budget and use AI. The reader will repeat your numbers in meetings with boards and investors, so a wrong number damages the reader's reputation. The reader may also share the page with colleagues who have the same background.
+The reader is intelligent and busy. The reader reads a profit and loss account with ease, but does not know what a token or a GPU is. The reader will use this knowledge in two roles. As an investor, the reader judges AI companies, data centres and deals. As an operator, the reader helps companies to buy, budget and use AI. The reader also sponsors software products, and decides with developers which platform to use at each stage. The reader does not write code. The reader will repeat your numbers in meetings with boards and investors, so a wrong number damages the reader's reputation. The reader may also share the page with colleagues who have the same background. The long-term goal of the reader is to become an expert in AI, so the course must also show the work that comes after the course.
 </context>
 
 <task>
@@ -214,7 +241,7 @@ Build a course with the name "AI explained" as one interactive web page. The cou
 </task>
 
 <success_criteria>
-The course succeeds if the reader can do these seven things after one reading, without help:
+The course succeeds if the reader can do these nine things after one reading, without help:
 1. Explain in two sentences how a language model makes an answer.
 2. Define the 12 core terms: model, parameter, training, inference, token, context window, prompt, GPU, data centre, hyperscaler, utilisation and gross margin.
 3. Calculate the cost of one AI request from its token counts and a price list.
@@ -222,11 +249,13 @@ The course succeeds if the reader can do these seven things after one reading, w
 5. Calculate the cost of one GPU-hour from the purchase price, the useful life, the utilisation and the power cost.
 6. Read 10 core KPIs and say what a high value and a low value mean.
 7. Ask five useful questions about an AI company or about an AI purchase.
-The quiz must test each of the seven criteria with at least one question.
+8. Choose a suitable type of platform for a product need that someone describes, and give the reason.
+9. Explain how an application scales, and name three parts that fail first when use increases.
+The quiz must test each of the nine criteria with at least one question.
 </success_criteria>
 
 <course_plan>
-Write six modules in this order. Start each module with one sentence that states what the reader will learn. End each module with three "You can now" statements.
+Write seven modules in this order. Start each module with one sentence that states what the reader will learn. End each module with three "You can now" statements.
 
 Module 1. What AI is
 Teach: AI, machine learning, deep learning, generative AI, large language model (LLM) and agent. A model is a very large mathematical function, and its numbers have the name parameters. Training sets the parameters. Inference uses the parameters to do work.
@@ -243,19 +272,26 @@ Picture: a chart of the fall in token prices, from the reference data.
 Interactive: a token cost calculator. Inputs: the model (from the price list in the reference data), input tokens, output tokens, the share of input that is cached, and requests for each day. Outputs: the cost for each request, each day and each month.
 Worked example: one question of 2,000 tokens with an answer of 500 tokens, on two different models.
 
-Module 4. Infrastructure: the AI factory
+Module 4. AI infrastructure: the AI factory
 Teach: the seven layers (energy, data centre, chips, cloud, model, application, user), with example companies and the direction of the money between layers. What a GPU is and why AI needs it. The ladder from one GPU to a server, a rack, a hall and a campus. kW, MW and GW. Cooling and PUE. Training clusters compared with inference clusters. The chip supply chain (designer, foundry, memory, equipment). The three limits on growth: power, chips and capital.
 Pictures: (a) the seven layers as a stack, with the flow of money, (b) the scale ladder, with the power for each step.
 
-Module 5. Economics and KPIs
+Module 5. Application infrastructure: what to use when
+Teach: the parts of an AI application and the work of each part: front end, back end, database, file storage, sign-in, the model API and the network edge. Four platforms as examples of four types. AWS is a general cloud, which supplies almost each building block and gives the most control for the most work. Supabase is a back end as a service, which supplies a Postgres database with sign-in, file storage and functions. Vercel is a front-end cloud, which hosts the web application and publishes it from the code repository. Cloudflare is an edge network, which supplies a content delivery network (CDN), security, and functions and storage near the user. Where the model sits: a model API from a model company, or the same model through a cloud service such as Amazon Bedrock. How teams combine the four types in one product. What to use when, by stage (prototype, product, scale) and by need (speed, control, compliance, cost). How an application scales: a larger server compared with more servers. Serverless functions compared with servers that run all the time. Why the database is the difficult part. Caches, queues, rate limits and regions. The three parts that fail first when use increases: database connections, rate limits of the model API, and cost. The shape of the cost: a fixed plan and a usage charge, egress fees, and the cost to change supplier.
+Pictures: (a) the path of one request from the browser of the user through the edge, the front end, the back end, the database and the model API, with an example platform on each part. (b) A matrix of needs against the four types of platform. (c) The three stages of growth, with the changes at each stage.
+Interactive: a stack selector. The reader selects the stage, the skill of the team and the most important need. The page shows a suggested combination of platform types, the reason for each part, the fixed plan cost for each month from the reference data, and the first limit that the team will meet. Label the result as a start point for a discussion with the developers.
+Describe each platform by its main purpose only, because the features of platforms change each month. Use the reference data for each plan price and each limit.
+
+Module 6. Economics and KPIs
 Teach four businesses, each with one worked example: (1) the GPU owner: cost for each GPU-hour, rental price, utilisation, depreciation and payback. (2) The data centre: capital cost for each MW, power cost and PUE. (3) The model company: revenue run-rate, gross margin, training cost and inference cost. (4) The application company or AI buyer: cost for each task, seat price compared with usage price, and gross margin after model costs.
 Interactive: a GPU-hour calculator. Inputs: purchase price for each GPU with its share of the server and network, useful life, utilisation, power for each GPU, PUE, electricity price, other cost for each hour, and rental price. Outputs: the cost for each GPU-hour (split into depreciation, power and other), the margin at the rental price, and the payback period.
-Table: a minimum of 20 KPIs. Columns: name, plain definition, unit, formula where one exists, typical value with its date, the meaning of a high or low value, and the user of the KPI (investor, operator or engineer). The reader can filter the table by user.
+Table: a minimum of 25 KPIs, which include five KPIs for applications (response time, uptime, error rate, requests for each second, and cost for each active user). Columns: name, plain definition, unit, formula where one exists, typical value with its date, the meaning of a high or low value, and the user of the KPI (investor, operator or engineer). The reader can filter the table by user.
 
-Module 6. How to use this knowledge
-Teach: the questions that an investor asks (strength of demand, depreciation life, customer concentration, power supply, contract length, price trend). The questions that an operator asks (which tasks, which model size, seat or usage, how to budget, how to measure value, data safety). The main risks, written as questions and not as forecasts.
+Module 7. How to use this knowledge, and the path to expert
+Teach: the questions that an investor asks (strength of demand, depreciation life, customer concentration, power supply, contract length, price trend). The questions that an operator asks (which tasks, which model size, seat or usage, how to budget, how to measure value, data safety). The main risks, written as questions and not as forecasts. Then the path to expert: four levels of skill (aware, fluent, practitioner, expert), with the things that a person at each level can do. A plan of 12 weeks with one practical task for each week, for a reader who has 3 to 4 hours each week. Each task uses the course: for example, calculate the token cost of a real task, read the accounts of one AI company, or build a small application with an AI coding tool on two of the platforms. State clearly that one course gives the map, and that practice makes the expert.
+Picture: the 12 weeks as a timeline in four phases.
 
-After the modules: a quiz of 12 questions with feedback on each answer, a glossary of 50 terms or more that the reader can search, and a list of sources with dates.
+After the modules: a quiz of 15 questions with feedback on each answer, a glossary of 70 terms or more that the reader can search, and a list of sources with dates.
 </course_plan>
 
 <language_rules>
@@ -321,7 +357,7 @@ Use the Ārahi 2027 brand. The brand is calm, precise and editorial, and its con
 3. Where the reference data give a range, show the range. Where the reference data mark a figure as uncertain, tell the reader that it is uncertain.
 4. If the course needs a figure that is not in the reference data, do not supply one from memory. Use an example value in a calculator and label it "example value", or tell the reader that the figure is not available.
 5. You can explain how the technology works from your general knowledge. Make each explanation simple, but do not make it false. Where a simple explanation hides an important detail, add a short note that starts with "Simplified:".
-6. Stay neutral about companies. Do not give investment advice. Write each risk as a question that the reader can ask.
+6. Stay neutral about companies and platforms. Do not give investment advice. For each platform, state a strength and a cost of that strength. Write each risk as a question that the reader can ask.
 7. State in the footer that the text follows the writing rules of ASD-STE100, and that no formal check against the STE dictionary was done.
 </accuracy_rules>
 
@@ -331,10 +367,10 @@ Give the course as one HTML file that contains its styles and scripts. Load only
 
 <self_check>
 Before you finish, check your work against this list and correct each failure:
-1. Each of the seven success criteria is taught in a module and tested in the quiz.
+1. Each of the nine success criteria is taught in a module and tested in the quiz.
 2. Each price, cost and company number agrees with the reference data and shows its date.
 3. The token cost calculator gives $0.009 for 2,000 input tokens and 500 output tokens at prices of $2 and $10 for each million tokens.
-4. The GPU-hour calculator gives the same result as a calculation that you do by hand from its default values.
+4. The GPU-hour calculator gives the same result as a calculation that you do by hand from its default values. The stack selector gives a result for each combination of its inputs.
 5. Each technical term has a definition at its first use and an entry in the glossary.
 6. No description has more than 25 words in one sentence, and no instruction has more than 20 words.
 7. The text has no em dashes, no semicolons, no exclamation marks and no emoji.
