@@ -369,12 +369,13 @@ Use the Ārahi 2027 brand. The brand is calm, precise and editorial, and its con
 
 <accuracy_rules>
 1. For each price, cost and company number, use only the figures in the reference data. The reader will repeat these numbers, and a number from memory can be out of date.
-2. Show the date and the source name near each figure. Put the full sources, with links, in one list at the end of the page.
-3. Where the reference data give a range, show the range. Where the reference data mark a figure as uncertain, tell the reader that it is uncertain.
-4. If the course needs a figure that is not in the reference data, do not supply one from memory. Use an example value in a calculator and label it "example value", or tell the reader that the figure is not available.
-5. You can explain how the technology works from your general knowledge. Make each explanation simple, but do not make it false. Where a simple explanation hides an important detail, add a short note that starts with "Simplified:".
-6. Stay neutral about companies and platforms. Do not give investment advice. For each platform, state a strength and a cost of that strength. Write each risk as a question that the reader can ask.
-7. State in the footer that the text follows the writing rules of ASD-STE100, and that no formal check against the STE dictionary was done.
+2. Build each explanation from the reference data: the fact lines, the builder notes and the investor notes. Research agents collected this material for each point of the course plan. Use your general knowledge only to join these facts into clear teaching. Do not use it to add a figure, a product fact or a claim about a company.
+3. Show the date and the source name near each figure. At the end of the page, list each source that the course uses, with its link. You do not need to list a source that the course does not use.
+4. Where the reference data give a range, show the range. Where the reference data mark a fact as uncertain, tell the reader that it is uncertain. Where the data give two sides of a dispute, give both sides.
+5. The reference data name some items as not in the data. If the course needs one of these items, tell the reader that the figure is not available, or use an example value in a calculator and label it "example value". Name each such item in your report.
+6. Make each explanation simple, but do not make it false. Where a simple explanation hides an important detail, add a short note that starts with "Simplified:".
+7. Stay neutral about companies and platforms. Do not give investment advice. For each platform, state a strength and a cost of that strength. Write each risk as a question that the reader can ask.
+8. State in the footer that the text follows the writing rules of ASD-STE100, and that no formal check against the STE dictionary was done. State also that the figures come from web research of 26 November 2026, and that the reader must check a figure at its source before use in a board paper.
 </accuracy_rules>
 
 <output_format>
@@ -384,7 +385,7 @@ Give the course as one HTML file that contains its styles and scripts. Load only
 <self_check>
 Before you finish, check your work against this list and correct each failure:
 1. Each of the twelve success criteria is taught in a module and tested in the quiz.
-2. Each price, cost and company number agrees with the reference data and shows its date. Each module has an investor view and a builder view.
+2. Each price, cost and company number agrees with the reference data and shows its date. Each explanation rests on a fact or a note in the reference data. Each module has an investor view and a builder view.
 3. The token cost calculator gives $0.009 for 2,000 input tokens and 500 output tokens at prices of $2 and $10 for each million tokens. In agent mode it gives $0.13 for 10 steps, a start context of 1,000 tokens, 1,000 tokens added at each step and 200 output tokens for each step, at the same prices and with no cache.
 4. The GPU-hour calculator gives the same result as a calculation that you do by hand from its default values. The gross margin calculator gives a model cost of $8.00 and a gross margin of 73 per cent for a seat price of $30, 400 tasks, and 5,000 input tokens and 1,000 output tokens for each task, at prices of $2 and $10. The stack selector gives a result for each combination of its inputs.
 5. Each technical term has a definition at its first use and an entry in the glossary.
