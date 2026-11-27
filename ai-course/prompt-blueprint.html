@@ -208,7 +208,7 @@ footer{margin-top:72px;padding-top:20px;border-top:1px solid var(--line);font-si
           <li><b>Draft against the checklist</b><span>A role, the situation of the reader, a reason for each rule, and one tag for each kind of content.</span></li>
           <li><b>Choose the techniques</b><span>Supplied data for the numbers, five examples for the style, and a self-check at the end.</span></li>
           <li><b>Add proven blocks</b><span>The Ārahi design system replaces the generic design block.</span></li>
-          <li class="is-point"><b>Run and review</b><span>A fresh session builds the course from the prompt alone. A review then compares the page with the twelve tests.</span></li>
+          <li class="is-point"><b>Run and review</b><span>A fresh session built the course from the prompt alone. A review compared the page with the twelve tests and the research.</span></li>
         </ol>
         <p class="note">The method comes from the Ārahi prompt-engineering skill, which follows the guidance of Anthropic and the technique list of IBM.</p>
       </section>
@@ -520,7 +520,7 @@ Before you finish, check your work against this list and correct each failure:
 
       <section id="run">
         <h2>The test run</h2>
-        <p class="strap">Research ran in three rounds, and a fresh session is now writing the course from the finished prompt.</p>
+        <p class="strap">Research ran in three rounds, a fresh session wrote the course, and a review passed it after 20 corrections.</p>
         <ol class="flow" style="--n:6">
           <li><b>Prompt</b><span>The thirteen blocks came first, with the plan for nine modules.</span></li>
           <li><b>Research</b><span>Research agents on a faster model searched the web in three rounds and wrote 34 reports.</span></li>
@@ -537,6 +537,11 @@ Before you finish, check your work against this list and correct each failure:
           <tr><td>Consistency audit: conflicts between the reports</td><td class="yes">1 agent</td><td>239 items. 113 lines deleted, 105 lines corrected, and 21 conflicts decided by hand.</td></tr>
           <tr><td>Second search of the key figures</td><td class="yes">13 groups</td><td>Confirmed: the Anthropic listing, the OpenAI round, the Nvidia results, the capital spending guides, the newest model prices and the EU AI Act delay.</td></tr>
           <tr><td>Points with research but no good answer</td><td class="no">Stated</td><td>Examples: a measured infrastructure bill at three sizes of application, and numeric thresholds for a strong AI product. The course states each gap and does not fill it from memory.</td></tr>
+          <tr><td>Review: the three calculators against the values in the self-check</td><td class="yes">Passed</td><td>$0.009 for one request, $0.13 for an agent task, and $8.00 with a 73 per cent margin. A hand calculation confirmed the GPU-hour result.</td></tr>
+          <tr><td>Review: the stack selector, the KPI filter, the quiz and the glossary search</td><td class="yes">Passed</td><td>All 36 combinations of the selector give a full answer. The page has 36 KPIs, 18 questions and 147 glossary terms.</td></tr>
+          <tr><td>Review: layout, themes and script errors</td><td class="yes">Passed</td><td>The page works at desktop width and at 400 pixels, in light and dark themes, with no script errors.</td></tr>
+          <tr><td>Review: links and figures against the research</td><td class="yes">Passed</td><td>Each link on the page comes from the research. Each dollar figure that is not in the research is a worked calculation from sourced inputs.</td></tr>
+          <tr><td>Review: corrections made by hand</td><td class="yes">20 corrections</td><td>16 sentences split to 25 words or fewer. Capital spending shown as a range, a claim about 2027 plans corrected, and two METR values marked as uncertain.</td></tr>
         </tbody></table></div>
         <div class="prose"><h3>Version history</h3></div>
         <ul class="changes">
@@ -555,6 +560,7 @@ Before you finish, check your work against this list and correct each failure:
       <section id="reuse">
         <h2>How to use the prompt again</h2>
         <p class="strap">Change the settings block, replace the reference data, and run the prompt in a new conversation.</p>
+        <p class="prose"><a href="https://claude.ai/artifact/PRZWipxkFiVcXkTYMYCvmT">Open the course that this prompt built</a></p>
         <ol class="steps">
           <li>Change the eight lines of the settings block for your new reader or your new subject.</li>
           <li>Replace the reference data with new research. Give each fact a date, a label and a source key.</li>
